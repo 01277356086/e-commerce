@@ -1,47 +1,9 @@
 
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { useState } from 'react';
-import Products from './Products';
-import Swal from 'sweetalert2'
+ 
 
 function Home() {
 
-  const [emailValue, setEmailValue] = useState('');
-  const [passValue, setpassValue] = useState('');
-  const [showProducts, setShowProducts] = useState(false);
-
-  const handleSubmit = () => {
-    if (emailValue === '') {
-      Swal.fire({
-        title: "Please Write Your Email !",
-        icon: "question"
-      });
-    } else if (!emailValue.includes('@gmail.com')) {
-      Swal.fire({
-        title: "Please Write @gmail.com !",
-        icon: "question"
-      });
-    }
-    else if (passValue === '') {
-      Swal.fire({
-        title: "Please Write Your Password !",
-        icon: "question"
-      });
-    } else {
-      setShowProducts(true);
-    }
-  };
-
-  const handleInputChange = (event) => {
-    setEmailValue(event.target.value);
-  };
-
-  const handlepassChange = (event) => {
-    setpassValue(event.target.value);
-  };
   return (
     <>
       <div style={{ textAlign: 'center' }}>
@@ -50,26 +12,9 @@ function Home() {
             <h1>BEST PLACE TO FIND AND EXPLORE<br />
               THAT ALL YOU NEED</h1>
             <h5 >Find Best Place, Restaurant, Hotel, Real State and many more think in just One click</h5>
-
-            <FloatingLabel
-              controlId="floatingInput"
-              label="Email Id"
-              className="mb-3"
-              value={emailValue}
-              onChange={handleInputChange}
-              style={{ width: '55%', color: 'black' }} >
-              <Form.Control id='mail' type="email" placeholder="Name" />
-            </FloatingLabel>
-
-            <FloatingLabel controlId="floatingPassword" label="Password" style={{ width: '55%', color: 'black' }}>
-              <Form.Control type="password" value={passValue} onChange={handlepassChange} placeholder="Password" />
-            </FloatingLabel>
-
-            <Button onClick={handleSubmit} style={{ margin: '20px' }} variant="primary">Login</Button>
-
+  
           </div>
-          <div className='home2'>
-
+          <div className='home2'> 
             <Card border="dark" data-aos="fade-right" data-aos-duration="3000" className='home3' style={{ margin: '10px', width: '13rem' }}>
               <Card.Body>
                 <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
@@ -108,9 +53,8 @@ function Home() {
           </div>
 
         </div> </div>
-
-      {showProducts && <Products />}
-    </>
+     
+     </>
   )
 }
 export default Home;

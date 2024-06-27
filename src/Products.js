@@ -5,9 +5,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchproducts } from './rtk/products-slice';
-import { addToCart } from './rtk/Cart-slice';
-import End from './End';
- import Scroll from './Scroll';
+import { addToCart } from './rtk/Cart-slice'; 
+import AppNav from './Nav';
  function Products() {
   const products = useSelector((state) => state.products);
 
@@ -19,8 +18,9 @@ import End from './End';
 
   return (
     <>
+   < AppNav />
       <Container >
-        <h1 className="text-center p-5" >All Products</h1>
+        <h1 className="text-center p-5" data-aos="zoom-out" data-aos-duration="3000" >All Products</h1>
 
         <Row className='py-5'>
           {products.map((product) => (
@@ -52,8 +52,7 @@ import End from './End';
         </Row>
       </Container>
 
-      <End />
-      <Scroll />
+       
     </>
   )
 }
