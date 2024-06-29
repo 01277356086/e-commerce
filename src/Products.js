@@ -5,9 +5,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchproducts } from './rtk/products-slice';
-import { addToCart } from './rtk/Cart-slice'; 
+import { addToCart } from './rtk/Cart-slice';
 import AppNav from './Nav';
- function Products() {
+function Products() {
   const products = useSelector((state) => state.products);
 
 
@@ -18,7 +18,7 @@ import AppNav from './Nav';
 
   return (
     <>
-   < AppNav />
+      < AppNav />
       <Container >
         <h1 className="text-center p-5" data-aos="zoom-out" data-aos-duration="3000" >All Products</h1>
 
@@ -34,16 +34,13 @@ import AppNav from './Nav';
                     <hr />
                     <Card.Text>
                       <b> Detail this product : </b>
-                      {product.description}
-
-                    </Card.Text>
+                      {product.description}  
+                     </Card.Text>
                     <hr />
                     <Card.Title>  <b> Price : </b>  {product.price}$</Card.Title>
                     <Button className='m-1' variant="primary" onClick={() => dispatch(addToCart(product))}>get this product</Button>
                   </Row>
-
-
-
+ 
 
                 </Card.Body>
               </Card>
@@ -52,7 +49,7 @@ import AppNav from './Nav';
         </Row>
       </Container>
 
-       
+
     </>
   )
 }

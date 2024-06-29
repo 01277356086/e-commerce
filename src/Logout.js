@@ -6,7 +6,7 @@ function Logout(){
 const [result,setresult]=useState(false)
    const log=()=>{ Swal.fire({
         title: "Are you sure?",
-        text: "You won't be log out !",
+        text: "are You want be log out !",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
