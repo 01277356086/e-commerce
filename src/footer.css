@@ -1,0 +1,46 @@
+ footer h2 {
+     font-size: 30px;
+     margin-bottom: 15px;
+     color: rgb(167, 31, 31);
+ }
+
+ footer ul li {
+     list-style-type: none;
+ }
+
+ footer ul li a {
+     color: #1e350b;
+     font-size: 16px;
+     /* letter-spacing: 1px; */
+     text-decoration: none;
+     font-weight: 500;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ footer ul li a :hover {
+     color: #6a9e3f;
+ }
+
+ .icon {
+     width: 40px;
+     height: 40px;
+     animation: icon .8s infinite alternate;
+     color: rgb(194, 10, 10);
+ }
+
+ .icons {
+     color: #1e350b;
+     width: 25px;
+     height: 25px;
+ }
+
+ @keyframes icon {
+     0% {
+         transform: translatex(-15px);
+     }
+
+     100% {
+         transform: translatex(-2px);
+     }
+
+ }

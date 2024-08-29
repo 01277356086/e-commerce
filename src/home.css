@@ -1,0 +1,33 @@
+.home {
+    background-image: url("./images/banner.jpg");
+    height: 130vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    justify-content: space-around;
+}
+
+.home1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 130px;
+}
+
+.home2 {
+    display: flex;
+    flex-direction: row;
+    margin: -30px;
+
+}
+
+.home2 .card:hover {
+    color: beige;
+    background-color: rgb(107, 105, 105); 
+    transform: scale(1.2);
+    transition: 1s ease
+}

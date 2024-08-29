@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -9,7 +9,7 @@ import { addToCart } from './rtk/Cart-slice';
 import AppNav from './Nav';
 function Products() {
   const products = useSelector((state) => state.products);
-
+ 
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -20,10 +20,11 @@ function Products() {
     <>
       < AppNav />
       <Container >
-        <h1 className="text-center p-5" data-aos="zoom-out" data-aos-duration="3000" >All Products</h1>
-
+        <h1 className="text-center p-5"  >All Products</h1>
+ 
         <Row className='py-5'>
           {products.map((product) => (
+            
             <Col key={product.id}>
               <Card style={{ width: '20rem', margin: '6px' }}>
                 <Card.Img variant="top" style={{ height: '35vh' }} src={product.image} />
@@ -34,13 +35,13 @@ function Products() {
                     <hr />
                     <Card.Text>
                       <b> Detail this product : </b>
-                      {product.description}  
-                     </Card.Text>
+                      {product.description}
+                    </Card.Text>
                     <hr />
                     <Card.Title>  <b> Price : </b>  {product.price}$</Card.Title>
                     <Button className='m-1' variant="primary" onClick={() => dispatch(addToCart(product))}>get this product</Button>
                   </Row>
- 
+
 
                 </Card.Body>
               </Card>

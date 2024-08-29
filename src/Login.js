@@ -1,14 +1,14 @@
 
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form'; 
+import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useState } from 'react'; 
+import { useState } from 'react';
 import Swal from 'sweetalert2'
 import { Navigate } from 'react-router-dom';
 import icon from './images/icon.png'
+import './login.css'
 function Login() {
-
-
+ 
     const [emailValue, setEmailValue] = useState('');
     const [passValue, setpassValue] = useState('');
     const [loggedIn, setLoggedIn] = useState(false);
@@ -57,7 +57,7 @@ function Login() {
                         <h1>Welcome <img style={{ width: '20%' }} src={icon} /></h1>
 
                         <FloatingLabel
-                            controlId="floatingInput"
+
                             label="Email Id"
                             className="mb-3"
                             value={emailValue}
@@ -71,6 +71,7 @@ function Login() {
                         </FloatingLabel>
 
                         <Button onClick={handleSubmit} style={{ margin: '20px' }} variant="primary">Login</Button>
+
 
                     </div>
                 </div>

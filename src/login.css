@@ -1,0 +1,36 @@
+.login {
+    background-image: url("./images/login1.jpg");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    justify-content: space-around;
+    /* width: 100%; */
+    background-size: cover;
+}
+
+.login1 {
+    width: 29%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login .login1 img {
+    animation: anim 1s infinite alternate;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+
+}
